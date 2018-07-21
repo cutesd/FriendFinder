@@ -32,14 +32,363 @@
         crossorigin="anonymous"></script>
 
 
+    <style>
+        h1 {
+            font-size: 63px;
+        }
+
+        .form-control-range {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 15px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
+
+        .form-control-range::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+
+        .form-control-range::-moz-range-thumb {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body>
 
-    THIS IS THE SURVEY PAGE.
+    <div class="container">
+        <div class="row justify-content-center my-5">
+            <div class="col-lg-12" id="survey">
+
+                <div class="card p-5">
+                    <h2>Survey Questions</h2>
+                    <hr>
+                    <form>
+                        <h3>About You</h3>
+                        <div class="form-group">
+                            <label for="name">Name (Required)</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="photo">Link to Photo Image (Required)</label>
+                            <input type="text" class="form-control" id="photo" placeholder="http://" required>
+                        </div>
+                        <hr class="my-5">
+
+                        <!-- Question #0 -->
+                        <h3>Question #1</h3>
+                        <div class="form-group mb-5">
+                            <label for="question0">Your mind is always buzzing with unexplored ideas and plans.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question0">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel0"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #0 -->
+
+                        <!-- Question #1 -->
+                        <h3>Question #2</h3>
+                        <div class="form-group mb-5">
+                            <label for="question1">Generally speaking, you rely more on your experience than your imagination.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question1">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel1"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #1 -->
+
+                        <!-- Question #2 -->
+                        <h3>Question #3</h3>
+                        <div class="form-group mb-5">
+                            <label for="question2">You find it easy to stay relaxed and focused even when there is some pressure.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question2">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel2"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #2 -->
+
+                        <!-- Question #3 -->
+                        <h3>Question #4</h3>
+                        <div class="form-group mb-5">
+                            <label for="question3">You rarely do something just out of sheer curiosity.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question3">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel3"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #3 -->
+
+                        <!-- Question #4 -->
+                        <h3>Question #5</h3>
+                        <div class="form-group mb-5">
+                            <label for="question4">People can rarely upset you.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question4">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel4"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #4 -->
+
+                        <!-- Question #5 -->
+                        <h3>Question #6</h3>
+                        <div class="form-group mb-5">
+                            <label for="question5">It is often difficult for you to relate to other people’s feelings.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question5">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel5"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #5 -->
+
+                        <!-- Question #6 -->
+                        <h3>Question #7</h3>
+                        <div class="form-group mb-5">
+                            <label for="question6">In a discussion, truth should be more important than people’s sensitivities.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question6">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel6"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #6 -->
+
+                        <!-- Question #7 -->
+                        <h3>Question #8</h3>
+                        <div class="form-group mb-5">
+                            <label for="question7">You rarely get carried away by fantasies and ideas.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question7">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel7"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #7 -->
+
+                        <!-- Question #8 -->
+                        <h3>Question #9</h3>
+                        <div class="form-group mb-5">
+                            <label for="question8">You think that everyone’s views should be respected regardless of whether they are supported
+                                by facts or not.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question8">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel8"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #8 -->
+
+                        <!-- Question #9 -->
+                        <h3>Question #10</h3>
+                        <div class="form-group mb-5">
+                            <label for="question9">You feel more energetic after spending time with a group of people.
+                            </label>
+                            <input type="range" min="1" max="5" step="1" class="form-control-range" id="question9">
+
+                            <div class="row p-2">
+                                <div class="col-6">1</div>
+                                <div class="col-6 text-right">5</div>
+                                <div class="col-4">Strongly Disagree</div>
+                                <div class="col-4 text-center">Your Response:
+                                    <span id="sel9"></span>
+                                </div>
+                                <div class="col-4 text-right">Strongly Agree</div>
+                            </div>
+                        </div>
+                        <!-- ./Question #9 -->
+
+                        <button class="btn btn-primary btn-lg btn-block" id="submit">
+                            <i class="fas fa-check-circle"></i> Submit</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6" id="complete">
+                <div class="card text-center p-5">
+                    <h1 class="text-success">
+                        <i class="fas fa-check-circle"></i>
+                    </h1>
+                    <h2 class="text-muted">Survey Submission Complete</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <!-- <a href="#" id="clear">Clear Friends</a> | -->
+                <a href="/api/friends">API Friends Link</a> |
+                <a href="https://github.com/cutesd/FriendFinder" target="_blank">GitHub Repo</a>
+            </p>
+        </div>
+    </footer>
+
+
+    <div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Your Best Match</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="http://placehold.it/300x300" class="img-fluid rounded-circle" id="matchImg" alt="">
+                        </div>
+                        <div class="col-8">
+                            <br>
+                            <h3 id="matchName"></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+
+            $("#complete").hide();
+
+            $('[id^="question"]').on("input change", function () {
+                var n = $(this).attr('id').substr(-1);
+                $("#sel" + n).text($(this).val());
+            });
+
+            $("#submit").on("click", function (e) {
+
+                e.preventDefault();
+                var scores_arr = [];
+                for (var i = 0; i < 10; i++) {
+                    console.log(i, $("#question" + i).val());
+                    scores_arr.push($("#question" + i).val());
+                }
+                var nameVal = $("#name").val().trim();
+                var url = $("#photo").val().trim();
+                var valid = /^(ftp|http|https):\/\/[^ "]+$/.test(url);
+                if (nameVal.length < 1 || !valid) return 
+                    console.log($("#name").val());
+                console.log($("#photo").val());
+
+                var newFriend = {
+                    name: nameVal,
+                    photo: url,
+                    scores: scores_arr
+                };
+
+                // 
+                $.post("/api/friends", newFriend)
+                    .then(function (data) {
+                        console.log("returned match:", data);
+                        $("#matchImg").attr('src', data.photo);
+                        $("#matchName").text(data.name);
+                        //
+                        $("#survey").hide();
+                        $("#complete").show();
+                        $('.modal').modal('show');
+                    });
+            });
+
+        });
 
 
 
+
+    </script>
 
 </body>
 

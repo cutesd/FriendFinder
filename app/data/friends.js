@@ -1,7 +1,7 @@
 var friends_arr = [
     {
-        "name": "Ahmed",
-        "photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAq7AAAAJDAwYzI4NTQ4LWYwZWUtNGFkYS1hNTYwLTZjYzkwY2ViZDA3OA.jpg",
+        "name": "Sharon Pittaway",
+        "photo": "https://images.unsplash.com/photo-1464820453369-31d2c0b651af?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bee2aae224bc536d92722ebfedf016b4&auto=format&fit=crop&w=500&q=60",
         "scores": [
             "5",
             "1",
@@ -16,8 +16,8 @@ var friends_arr = [
         ]
     },
     {
-        "name": "Jacob Deming",
-        "photo": "https://pbs.twimg.com/profile_images/691785039043022849/oWsy8LNR.jpg",
+        "name": "Sean Pierce",
+        "photo": "https://images.unsplash.com/photo-1513025186107-2688cad44a98?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=0622725accc424a8a061f705a3495882&auto=format&fit=crop&w=500&q=60",
         "scores": [
             "4",
             "2",
@@ -32,8 +32,8 @@ var friends_arr = [
         ]
     },
     {
-        "name": "Jeremiah Scanlon",
-        "photo": "https://avatars2.githubusercontent.com/u/8504998?v=3&s=460",
+        "name": "Andrew Draper",
+        "photo": "https://images.unsplash.com/photo-1498078675142-85259d452c6b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=450f02b67d2c9700de2f53926b46c0f6&auto=format&fit=crop&w=500&q=60",
         "scores": [
             "5",
             "2",
@@ -56,19 +56,19 @@ var totalDifference = (_arr) => {
     
     friends_arr.forEach(friend => {
         var score = 0;
-        console.log('');
+        // console.log('');
         for (var i = 0; i < friend.scores.length; i++) {
-            console.log('\n', parseInt(friend.scores[i]), '-', parseInt(_arr[i]), "=", Math.abs(parseInt(friend.scores[i]) - parseInt(_arr[i])));
+            // console.log('\n', parseInt(friend.scores[i]), '-', parseInt(_arr[i]), "=", Math.abs(parseInt(friend.scores[i]) - parseInt(_arr[i])));
             score += Math.abs(parseInt(friend.scores[i]) - parseInt(_arr[i]));
-            console.log(score);
+            // console.log(score);
         }
 
-        console.log('\n', score, "<", new_low);
+        // console.log('\n', score, "<", new_low);
         if (score < new_low) {
             new_low = score;
             low_obj = friend;
-            console.log("\n\nNEW LOW!!\n")
-            console.log(new_low, JSON.stringify(low_obj, null, 2));
+            // console.log("\n\nNEW LOW!!\n")
+            // console.log(new_low, JSON.stringify(low_obj, null, 2));
         }
     });
 
@@ -82,7 +82,39 @@ module.exports = {
 };
 
 
-// 
+//https://images.unsplash.com/photo-1513754991953-820561d659e5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=7d125c8d28274541e5a566ef515cec05&auto=format&fit=crop&w=500&q=60 
+//Catrin Johnson
+
+//https://images.unsplash.com/photo-1504505278590-428d1acd0f07?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=f80b55c6a17034ef06998c4e8c0d40bc&auto=format&fit=crop&w=500&q=60
+//Robert Collins
+//
+
+//https://images.unsplash.com/photo-1525351326368-efbb5cb6814d?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=49748d3bcd66541540085cc8bffd5567&auto=format&fit=crop&w=500&q=60
+//Ben Kolde
+
+// SQUARE
+
+//https://images.pexels.com/photos/1081685/pexels-photo-1081685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+//3Motional
+
+//https://images.pexels.com/photos/45882/man-crazy-funny-dude-45882.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+//Brad Stevens
+
+//https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+//Simon Robben
+
+//https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+//Shelly Struthers
+
+//https://images.pexels.com/photos/157661/young-woman-shooting-model-157661.jpeg?auto=compress&cs=tinysrgb&h=650&w=940
+//Sam Bee
+
+//https://images.pexels.com/photos/756453/pexels-photo-756453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+//Brucie Mars
+
+//https://images.pexels.com/photos/936229/pexels-photo-936229.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+//Matt Tdtgt
+
         //     "name": "Brendon Barringer",
         //     "photo": "https://www.facebook.com/photo.php?fbid=719680101412930&set=a.403862362994707.88383.100001128418685&type=3&theater",
         //     "scores": [

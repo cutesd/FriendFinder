@@ -12,7 +12,9 @@ router.route('/friends').get((req, res) => {
 
 router.route('/friends').post((req, res) => {
     var newFriend = req.body;
-    console.log("sending data to friends database");
+    var match = friends.totalDifference(newFriend.scores);
+    friends.friends_arr.push(newFriend);
+    res.json(match);
 });
 
 module.exports = router;
