@@ -80,3 +80,4 @@ module.exports = {
     friends_arr : friends_arr,
     totalDifference : totalDifference
 };
+
